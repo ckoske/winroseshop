@@ -1,4 +1,4 @@
-#container.pr-3.pl-3
+#container
     #header-text
         h4.text-uppercase Winrose
         h4.text-uppercase.font-weight-lighter Shop
@@ -6,12 +6,17 @@
         mixin text-button(text)
             button.hc-button.btn.btn-outline-light.text-dark.bg-transparent.mr-1.border-0.text-uppercase.font-weight-lighter&attributes(attributes)= text
             
-        .dropdown
-            +text-button('Items Category')(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-            .dropdown-menu(aria-labelledby='dropdownMenuButton')
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
+        div(ngbDropdown)
+            +text-button('Items Category')(ngbDropdownToggle)
+            div(ngbDropdownMenu aria-labelledby='dropdownBasic1')
+                mixin ddbutton(text)
+                    button.btn-light.font-weight-lighter(ngbDropdownItem)= text
+                
+                +ddbutton('Bag')
+                +ddbutton('Wallet')
+                +ddbutton('Case')
+                +ddbutton('Keyholder')
+                +ddbutton('Other')
 
         +text-button('About')
         +text-button('Shopping Guide')
@@ -23,5 +28,36 @@
                 img.button-icon(src='/assets/' + name + '.svg')
         
         +icon-button('search')
-        +icon-button('chat-square-quote')
+        +icon-button('inbox')
+        +icon-button('person-circle')
         +icon-button('cart3')
+    
+    #header-buttons-sm
+        div(ngbDropdown placement="bottom-right")
+            button#menu-button.btn.btn-outline-light.mr-1.border-0(ngbDropdownToggle)
+                img.button-icon(src='/assets/list.svg')
+            div(ngbDropdownMenu aria-labelledby='dropdownBasic1')
+                mixin upperDDbutton(text)
+                    button.btn-light.font-weight-lighter.text-uppercase(ngbDropdownItem class!=attributes.class)= text
+                
+                +upperDDbutton('Home')
+                +upperDDbutton('About')
+                +upperDDbutton('Shopping Guide')
+                +upperDDbutton('Item Categories')(class='disabled')
+                +ddbutton('- Bag')
+                +ddbutton('- Wallet')
+                +ddbutton('- Case')
+                +ddbutton('- Keyholder')
+                +ddbutton('- Other')
+                +upperDDbutton('Contact')
+                .dropdown-divider
+                form
+                    +icon-button('inbox')
+                    +icon-button('person-circle')
+                    +icon-button('cart3')
+                .dropdown-divider
+                form
+                    .col-auto
+                        .input-group
+                            input.m-0.p-0.form-control.border-top-0.border-right-0.border-left-0.rounded-0(type="text" id="inlineFormInputGroup" placeholder="Search Item")
+                        button.mt-2.btn.btn-sm.btn-outline-dark Search
