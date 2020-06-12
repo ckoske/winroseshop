@@ -1,0 +1,34 @@
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#header-text {
+    display: flex;
+    flex-direction: row;
+}
+
+#header-center-buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+@keyframes hc-button {
+    from { text-decoration-color: transparent; }
+    to { text-decoration-color: auto; }
+}
+
+.hc-button:hover {
+    text-decoration: line-through;
+    animation: hc-button 2s linear;
+}
+
+#header-right-buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: end;
+}

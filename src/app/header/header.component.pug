@@ -1,0 +1,27 @@
+#container.pr-3.pl-3
+    #header-text
+        h4.text-uppercase Winrose
+        h4.text-uppercase.font-weight-lighter Shop
+    #header-center-buttons
+        mixin text-button(text)
+            button.hc-button.btn.btn-outline-light.text-dark.bg-transparent.mr-1.border-0.text-uppercase.font-weight-lighter&attributes(attributes)= text
+            
+        .dropdown
+            +text-button('Items Category')(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+
+        +text-button('About')
+        +text-button('Shopping Guide')
+        +text-button('Contact')
+        
+    #header-right-buttons.ml-4
+        mixin icon-button(name)
+            button.btn.btn-outline-light.mr-1.border-0
+                img.button-icon(src='/assets/' + name + '.svg')
+        
+        +icon-button('search')
+        +icon-button('chat-square-quote')
+        +icon-button('cart3')
