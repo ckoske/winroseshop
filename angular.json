@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "winrose"
+    }
+  },
+  "defaultProject": "winrose",
+  "cli": {
+    "analytics": "ceb90adf-b507-4dcf-891d-018b5c04c67b"
+  }
 }
