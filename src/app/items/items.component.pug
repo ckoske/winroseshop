@@ -1,1 +1,10 @@
-<p>items works!</p>
+#cont
+    #title-cont 
+        h3.font-weight-light.text-uppercase Items
+        hr
+    #items-cont
+        .card.rounded-0.border-0(*ngFor='let item of items')
+            img.rounded-0.card-img-top(src='{{item.image}}')
+            .card-body.pr-0.pl-0.pb-0
+                .card-title.mb-0.font-weight-bold {{item.name}}
+                .card-text.text-muted.font-weight-light {{item.price | currency:'Kshs. ':'symbol':'4.2-2'}}
