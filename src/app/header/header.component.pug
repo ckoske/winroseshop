@@ -10,13 +10,13 @@
             +text-button('Items Category')(ngbDropdownToggle)
             div(ngbDropdownMenu aria-labelledby='dropdownBasic1')
                 mixin ddbutton(text)
-                    button.btn-light.font-weight-lighter(ngbDropdownItem)= text
+                    button.btn-light.font-weight-lighter(ngbDropdownItem class!=attributes.class)= text
                 
-                +ddbutton('Bag')
-                +ddbutton('Wallet')
-                +ddbutton('Case')
-                +ddbutton('Keyholder')
-                +ddbutton('Other')
+                +ddbutton('Bag')(class='hc-button')
+                +ddbutton('Wallet')(class='hc-button')
+                +ddbutton('Case')(class='hc-button')
+                +ddbutton('Keyholder')(class='hc-button')
+                +ddbutton('Other')(class='hc-button')
 
         +text-button('About')
         +text-button('Shopping Guide')
