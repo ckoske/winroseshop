@@ -25,7 +25,7 @@
     #header-right-buttons.ml-4
         mixin icon-button(name)
             button.btn.btn-outline-light.mr-1.border-0
-                img.button-icon(src='/assets/' + name + '.svg')
+                img.button-icon(src='/assets/images/icons/' + name + '.svg')
         
         +icon-button('search')
         +icon-button('inbox')
@@ -35,7 +35,7 @@
     #header-buttons-sm
         div(ngbDropdown placement="bottom-right")
             button#menu-button.btn.btn-outline-light.mr-1.border-0(ngbDropdownToggle)
-                img.button-icon(src='/assets/list.svg')
+                img.button-icon(src='/assets/images/icons/list.svg')
             div(ngbDropdownMenu aria-labelledby='dropdownBasic1')
                 mixin upperDDbutton(text)
                     button.btn-light.font-weight-lighter.text-uppercase(ngbDropdownItem class!=attributes.class)= text
