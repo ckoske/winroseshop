@@ -1,1 +1,7 @@
-<p>information works!</p>
+#cont
+    h3#info-title.font-weight-light Information
+    table#info-table.table.table-borderless
+        tbody
+            tr(*ngFor='let info of information') 
+                    td.font-weight-lighter {{ info.date | date : 'yyyy/mm/dd' }}
+                    td.font-weight-light {{ info.message }}

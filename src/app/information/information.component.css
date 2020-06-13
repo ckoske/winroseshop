@@ -1,0 +1,36 @@
+#cont {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#info-title {
+    text-align: center;
+}
+
+#info-table {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #info-table {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) { 
+    #cont {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #info-table {
+        width: 60%;
+    }
+
+    #info-title {
+        width: 20%;
+    }
+}
