@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InformationComponent } from './information/information.component';
+import { ItemsComponent } from './items/items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CarouselComponent,
-    InformationComponent
+    InformationComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
