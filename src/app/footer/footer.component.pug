@@ -1,1 +1,19 @@
-<p>footer works!</p>
+#container
+    #footer-text
+        h3.text-uppercase Winrose
+        h3.text-uppercase.font-weight-lighter Shop
+    #footer-center-options
+        mixin footer-text-button(name)
+            button.btn.btn-light.bg-transparent.btn-sm.font-weight-light.border-0= name
+
+        +footer-text-button('Terms and Conditions')
+        +footer-text-button('FAQ')
+        +footer-text-button('Privacy Policy')
+    #footer-socials
+        mixin footer-icon-button(icon)
+            button.btn.btn-light.bg-transparent.border-0
+                img.button-icon(src='/assets/images/icons/' + icon + '.svg')
+
+        +footer-icon-button('instagram')
+        +footer-icon-button('pinterest')
+
