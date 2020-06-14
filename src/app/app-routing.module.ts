@@ -6,8 +6,8 @@ import { ItemsViewComponent } from './items-view/items-view.component';
 
 const routes: Routes = [
   { path: '',   component: HomeViewComponent, pathMatch: 'full' }, 
-  { path: 'items', component: ItemsViewComponent },
   { path: 'items/:category', component: ItemsViewComponent },
+  { path: 'items', component: ItemsViewComponent },
   { path: '**', component: HomeViewComponent },
 ];
 
