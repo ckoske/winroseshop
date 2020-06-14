@@ -11,6 +11,7 @@ import { InformationComponent } from './information/information.component';
 import { ItemsComponent } from './items/items.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeViewComponent } from './home-view/home-view.component';
+import { ItemsViewComponent } from './items-view/items-view.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeViewComponent } from './home-view/home-view.component';
     InformationComponent,
     ItemsComponent,
     FooterComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    ItemsViewComponent
   ],
   imports: [
     BrowserModule,
