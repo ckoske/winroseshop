@@ -10,8 +10,4 @@
     #cont {
         padding: 1rem;
     }
-
-    app-jumbotron {
-        flex-grow: 1;
-    }
 }
