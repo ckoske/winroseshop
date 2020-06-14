@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InformationComponent } from './information/information.component';
 import { ItemsComponent } from './items/items.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeViewComponent } from './home-view/home-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     InformationComponent,
     ItemsComponent,
-    FooterComponent
+    FooterComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,
