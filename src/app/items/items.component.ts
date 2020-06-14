@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IItem } from './item';
 
 @Component({
@@ -7,6 +7,9 @@ import { IItem } from './item';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
+  @Input() category: string;
+  @Input() isMain: boolean;
+
   bags: IItem[] =[
     {
       type: 'bag',
@@ -142,11 +145,37 @@ export class ItemsComponent implements OnInit {
     }
   ];
 
-  items: IItem[] = [ ...this.bags, ...this.wallets, ...this.cases, ...this.keyholders, ...this.others];
-
+  items: IItem[] = [];
+  
   constructor() { }
 
   ngOnInit(): void {
+    switch (this.category) {
+      case "bags": {
+        this.items = this.bags;
+        break;
+      }
+      case "wallets": {
+        this.items = this.wallets;
+        break;
+      }
+      case "cases": {
+        this.items = this.cases;
+        break;
+      }
+      case "keyholders": {
+        this.items = this.keyholders;
+        break;
+      }
+      case "others": {
+        this.items = this.others;
+        break;
+      }
+      default: {
+        this.items = [ ...this.bags, ...this.wallets, ...this.cases, ...this.keyholders, ...this.others];
+        break;
+      }
+    }
   }
 
 }

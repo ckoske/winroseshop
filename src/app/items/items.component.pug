@@ -1,6 +1,6 @@
-#cont
+#cont([ngClass]="isMain ? 'pt-5' : ''")
     #title-cont 
-        h3.font-weight-light.text-uppercase Items
+        h3.font-weight-light([ngClass]="isMain ? 'text-uppercase' : 'text-capitalize'") {{ category || 'Items' }}
         hr
     #items-cont
         .card.rounded-0.border-0(*ngFor='let item of items')
