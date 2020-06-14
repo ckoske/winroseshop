@@ -2,5 +2,5 @@
     nav.bg-transparent(aria-label='breadcrumb')
         ol.breadcrumb.bg-transparent
             li.font-weight-light.breadcrumb-item(*ngFor='let crumb of crumbs')
-                a.text-muted(href='{{crumb.href}}') {{crumb.text}}
+                a.text-muted(routerLink='{{crumb.href}}') {{crumb.text}}
             li.font-weight-light.breadcrumb-item.active(aria-current='page').text-capitalize {{current}}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { IItem } from './item';
 
 @Component({
@@ -6,7 +6,7 @@ import { IItem } from './item';
   templateUrl: './items.component.pug',
   styleUrls: ['./items.component.css']
 })
-export class ItemsComponent implements OnInit {
+export class ItemsComponent implements OnChanges {
   @Input() category: string;
   @Input() isMain: boolean;
 
@@ -149,7 +149,7 @@ export class ItemsComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     switch (this.category) {
       case "bags": {
         this.items = this.bags;

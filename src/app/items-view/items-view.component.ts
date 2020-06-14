@@ -11,15 +11,17 @@ import { INavCrumb } from '../nav/navcrumb';
 export class ItemsViewComponent implements OnInit {
   category: string;
   
-  crumbs: INavCrumb[] = [
-    {text: "Home", href: "/"}
-  ];
+  crumbs: INavCrumb[];
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe( paramMap => {
       this.category = paramMap.get('category');
+
+      this.crumbs = [
+        {text: "Home", href: "/"}
+      ];
 
       if(this.category){
         this.crumbs.push({text: "Items", href: "/items"});
