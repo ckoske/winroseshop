@@ -1,8 +1,6 @@
 #cont
     nav.bg-transparent(aria-label='breadcrumb')
         ol.breadcrumb.bg-transparent
-            li.font-weight-light.breadcrumb-item
-                a.text-muted(href='#') Home
-            li.font-weight-light.breadcrumb-item
-                a.text-muted(href='#') Library
-            li.font-weight-light.breadcrumb-item.active(aria-current='page') Data
+            li.font-weight-light.breadcrumb-item(*ngFor='let crumb of crumbs')
+                a.text-muted(href='{{crumb.href}}') {{crumb.text}}
+            li.font-weight-light.breadcrumb-item.active(aria-current='page').text-capitalize {{current}}
